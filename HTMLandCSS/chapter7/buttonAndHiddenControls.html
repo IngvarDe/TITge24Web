@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button and Hidden Controls</title>
+</head>
+<body>
+    <form action="http://www.example.com/add.php">
+        <button><img src="images/add.gif" alt="add" width="10" height="10">Add</button>
+        <input type="hidden" name="bookmark" value="lyrics" />
+    </form>
+    <hr />
+    <form action="http://www.example.com/profile.php">
+        <p>Please select your favorite music service(s)
+            <br />
+            <input type="checkbox" name="service" value="itunes" checked="checked"> iTunes
+            <input type="checkbox" name="service" value="lastfm"> Last FM
+            <input type="checkbox" name="service" value="spotify"> Spotify
+        </p>
+    </form>
+    <hr />
+    <form action="http://www.example.com/bookings" method="post">
+        <label for="username">Departure date: </label>
+        <input type="date" name="depart" />
+        <input type="submit" value="Submit" />
+    </form>
+    <hr />
+    <form action="http://www.example.com/subscribe.php">
+        <p>Please enter your email: </p>
+        <input type="email" name="email" />
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+</html>
