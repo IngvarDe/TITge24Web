@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border and Background</title>
+    <style  type="text/css">
+        table {
+            border: none;
+        }
+        th, td {
+            border: none;
+            background-color: #dddddd;
+            padding: 5px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <table border="6" bgcolor="#efefef">
+        <tr>
+            <th width="150"></th>
+            <th>Withdrawn</th>
+            <th>Credit</th>
+            <th width="150" bgcolor="#12e64b">Blance</th>
+        </tr>
+        <tr>
+            <th>January</th>
+            <td>135.50</td>
+            <td>895.20</td>
+            <td bgcolor="#cfc20c">1110.50</td>
+        </tr>
+        <tr>
+            <th>February</th>
+            <td>135.50</td>
+            <td>895.20</td>
+            <td bgcolor="#cc0c33">1110.50</td>
+        </tr>
+    </table>
+    <hr />
+    <h4>Spanning Columns</h4>
+    <table>
+        <tr>
+            <th></th>
+            <th>9am</th>
+            <th>10am</th>
+            <th>11am</th>
+            <th>12am</th>
+        </tr>
+        <tr>
+            <th>Monday</th>
+            <td colspan="2">Geography</td>
+            <td>Math</td>
+            <td>Art</td>
+        </tr>
+        <tr>
+            <th>Tuesday</th>
+            <td colspan="3">Gym</td>
+            <td>Home Ec</td>
+        </tr>
+    </table>
+
+    <hr />
+    <h4>Spanning Columns</h4>
+    <table>
+        <tr>
+            <th></th>
+            <th>ABC</th>
+            <th>BBC</th>
+            <th>CNN</th>
+        </tr>
+        <tr>
+            <th>6pm - 7pm</th>
+            <td rowspan="2">Movie</td>
+            <td>Comedy</td>
+            <td>News</td>
+        </tr>
+        <tr>
+            <th>7pm - 8pm</th>
+            <td >Sport</td>
+            <td>Current Affairs</td>
+        </tr>
+    </table>
+</body>
+</html>
