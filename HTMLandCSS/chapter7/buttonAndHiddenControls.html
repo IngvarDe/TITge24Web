@@ -31,5 +31,77 @@
         <input type="email" name="email" />
         <input type="submit" value="Submit" />
     </form>
+    <hr />
+    <h1>Drop down list</h1>
+    <form action="http://www.example.com/subscribe.php">
+        <p>What device do you listen to music on? </p>
+        <select name="devices" id="">
+            <option value="ipod">iPod</option>
+            <option value="radio">Radio</option>
+            <option value="computer">Computer</option>
+        </select>
+    </form>
+    <hr />
+    <h1>File input box</h1>
+    <form action="http://www.example.com/subscribe.php">
+        <p>Upload your song in MP3 format: </p>
+        <input type="file" name="user-song" />
+        <input type="submit" value="Upload" />
+    </form>
+    <hr />
+    <h1>Grouping Form Elements</h1>
+    <form action="http://www.example.com/subscribe.php">
+        <fieldset>
+            <legend>Contact details</legend>
+            <label >Email: <br /><input type="text" name="email"></label><br />
+            <label >Mobile: <br /><input type="text" name="mobile"></label><br />
+            <label >Telephone: <br /><input type="text" name="telephone"></label><br />
+        </fieldset>
+    </form>
+    <hr />
+    <h1>Image button</h1>
+    <form action="http://www.example.com/subscribe.php">
+        <p>Subscribe to our email list: </p>
+        <input type="text" name="email" />
+        <input type="image" src="images/subscribe.jpg" width="100" height="20" />
+    </form>
+    <hr />
+    <h1>Labeling form controls</h1>
+    <form action="http://www.example.com/subscribe.php">
+        <label>Age: <input type="text" name="age" /></label>
+        <br />
+        <p>Gender: </p>
+        <input id="female" type="radio" name="gender" value="f"/>
+        <label for="female">Female</label>
+        <input id="male" type="radio" name="gender" value="m"/>
+        <label for="male">Male</label>
+    </form>
+    <hr />
+    <h1>Multi Select Box</h1>
+    <form>
+        <p>Do you play any of the following instruments? </p>
+        <select name="instruments" size="3" multiple="multiple">
+            <option value="guitar" selected="selected">Guitar</option>
+            <option value="drums">Drums</option>
+            <option value="keyboard" selected="selected">Keyboard</option>
+            <option value="bass">Bass</option>
+        </select>
+    </form>
+    <hr />
+    <h1>Password Input</h1>
+    <form action="http://www.example.com/login.php">
+        <p>Username: 
+            <input type="text" name="username" size="15" maxlength="30"/>
+        </p>
+        <p>Password:
+            <input type="password" name="password" size="15" maxlength="30" />
+        </p>
+    </form>
+    <hr />
+    <h1>Textarea</h1>
+    <form>
+        <p>Write your notes here</p>
+        <textarea name="comments" cols="30" rows="4" placeholder="Enter your comment"></textarea>
+    </form>
 </body>
 </html>
