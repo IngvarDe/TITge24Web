@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elliptical Shapes</title>
+    <style>
+        p {
+            border: 5px solid blue;
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 20px;
+        }
+        p.one {
+            border-top-left-radius: 80px 50px;
+        }
+        p.two {
+            border-radius: 1em 4em 1em 4em / 5em 1em 4em 1em;
+        }
+        p.three {
+            padding: 0px;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p class="one"></p>
+    <p class="two"></p>
+    <p class="three"></p>
+</body>
+</html>
