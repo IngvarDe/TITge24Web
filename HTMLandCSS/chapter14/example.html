@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List, Tables and Forms</title>
+    <link rel="stylesheet" href="css/example.css">
+    siia tuleb viide css failile, mis asub css kaustas
+</head>
+<body>
+    <h1>Poetry Workshops</h1>
+    <p>
+        We will be conducting a number of poetry workshops
+        and symposiums throughout the year.
+    </p>
+    <p>
+        Please note that the following events are free to members:
+    </p>
+    <ul>
+        <li>A Poetic Perspective</li>
+        <li>Walt Whitman at War</li>
+        <li>Found Poems and Outsider Poetry</li>
+    </ul>
+    <table>
+        <tr class="head">
+            <th></th>
+            <th>New York</th>
+            <th>Chicago</th>
+            <th>San Francisco</th>
+        </tr>
+        <tr>
+            <th>A Poetic Perspective</th>
+            <td>Sat, 5 Mar 2025 <br>11am - 2pm</td>
+            <td>Sat, 6 Mar 2025 <br>11am - 2pm</td>
+            <td>Sat, 15 Mar 2025 <br>11am - 2pm</td>
+        </tr>
+        <tr class="even">
+            <th>Walt Whitman at Art</th>
+            <td>Sat, 7 Mar 2025 <br>11am - 1pm</td>
+            <td>Sun, 8 Mar 2025 <br>11am - 1pm</td>
+            <td>Sat, 19 Mar 2025 <br>11am - 1pm</td>
+        </tr>
+        <tr>
+            <th>Found poems &amp; Outsider Poetry</th>
+            <td>Sat, 9 Mar 2025 <br>11am - 2pm</td>
+            <td>Sun, 10 Mar 2025 <br>11am - 2pm</td>
+            <td>Sat, 21 Mar 2025 <br>11am - 2pm</td>
+        </tr>
+        <tr class="even">
+            <th>Natural Art: An Exploration</th>
+            <td>Sat, 7 Mar 2025 <br>11am - 4pm</td>
+            <td>Sun, 8 Mar 2025 <br>11am - 4pm</td>
+            <td>Sat, 19 Mar 2025 <br>11am - 4pm</td>
+        </tr>
+    </table>
+    <form action="" method="get">
+        <fieldset>
+            <legend>Register your interest</legend>
+            <p>
+                <label for="name" class="title">Your name:</label>
+                <input type="text" name="name" id="name"><br />
+                <label for="email" class="title">Your Email:</label>
+                <input type="text" name="email" id="email">
+            </p>
+            <p>
+                <label for="location" class="title">Your closest center:</label>
+                <select name="location" id="location">
+                    <option value="ny">New York</option>
+                    <option value="il">Chicago</option>
+                    <option value="ca">San Francisco</option>
+                </select>
+            </p>
+            <span>Are you a member?</span>
+            <label><input type="radio" name="member" value="yes" />Yes</label>
+            <label><input type="radio" name="member" value="no" />No</label>
+        </fieldset>
+        <div class="submit"><input type="submit" value="Register"></div>
+    </form>
+</body>
+</html>
