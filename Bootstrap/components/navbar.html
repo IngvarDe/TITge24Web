@@ -8,7 +8,7 @@
     <script src="js/bootstrap.bundle.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="https://mdbootstrap.com/img/Marketing/mdb-press-pack/mdb-dark.jpg"
@@ -29,16 +29,16 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav mb-2 mb-lg-0 me-auto">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#">Link</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="dropdown nav-item">
                         <a href="#"
-                        class="nav-link dropdown-toggle"
+                        class="dropdown-toggle nav-link"
                         id="navbarDropdown"
                         role="button"
                         data-bs-toggle="dropdown"
@@ -68,5 +68,218 @@
             </div>
         </div>
     </nav>
+
+    <div class="container my-5">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+                <h5 class="text-white h4">Collapsed content</h5>
+                <span class="text-muted">Toggleable via the navbar brand.</span>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container my-5">
+        <h2>Base nav</h2>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Link1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Link2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" tabindex="-1" aria-dropeffect="true" aria-current="page" href="#">Link3</a>
+            </li>
+        </ul>
+
+        <h2 class="my-5">Tabs</h2>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button
+                class="nav-link active"
+                id="pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-home"
+                type="button"
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="true">
+                    Home
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                class="nav-link"
+                id="pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-profile"
+                type="button"
+                role="tab"
+                aria-controls="pills-profile"
+                aria-selected="false">
+                    Profile
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                class="nav-link"
+                id="pills-contact-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-contact"
+                type="button"
+                role="tab"
+                aria-controls="pills-contact"
+                aria-selected="false">
+                    Contact
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button
+                class="nav-link"
+                id="pills-other-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-other"
+                type="button"
+                role="tab"
+                aria-controls="pills-other"
+                aria-selected="false">
+                    Other
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContact">
+            <div
+            class="active fade show tab-pane"
+            id="pills-home"
+            role="tabpanel"
+            aria-labelledby="pills-home-tab">
+            Home tab
+            </div>
+            <div
+            class="fade tab-pane"
+            id="pills-profile"
+            role="tabpanel"
+            aria-labelledby="pills-profile-tab">
+            Profile tab
+            </div>
+            <div
+            class="fade tab-pane"
+            id="pills-contact"
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab">
+            Contact tab
+            </div>
+            <div
+            class="fade tab-pane"
+            id="pills-other"
+            role="tabpanel"
+            aria-labelledby="pills-other-tab">
+            Other tab
+            </div>
+        </div>
+
+        <h2 class="my-5">Vertical</h2>
+        <div class="d-flex align-items-start">
+            <div
+            class="flex-column nav nav-pills me-3"
+            id="v-pills-tab"
+            role="tablist"
+            aria-orientation="vertical">
+
+                <button 
+                class="nav-link active"
+                id="v-pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-home"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-home"
+                aria-selected="true">
+                    Home
+                </button>
+                <button 
+                class="nav-link"
+                id="v-pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-profile"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-profile"
+                aria-selected="true">
+                    Profile
+                </button>
+                <button 
+                class="nav-link"
+                id="v-pills-messages-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-messages"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-messages"
+                aria-selected="true">
+                    Messages
+                </button>
+                <button 
+                class="nav-link"
+                id="v-pills-settings-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#v-pills-settings"
+                type="button"
+                role="tab"
+                aria-controls="v-pills-settings"
+                aria-selected="true">
+                    Settings
+                </button>
+            </div>
+            <div class="tab-content" id="v-pills-tabContent">
+                <div 
+                class="active fade show tab-pane"
+                id="v-pills-home"
+                role="tabpanel"
+                aria-labelledby="v-pills-home-tab">
+                    Home
+                </div>
+                <div 
+                class="fade tab-pane"
+                id="v-pills-profile"
+                role="tabpanel"
+                aria-labelledby="v-pills-profile-tab">
+                    Profile
+                </div>
+                <div 
+                class="fade tab-pane"
+                id="v-pills-messages"
+                role="tabpanel"
+                aria-labelledby="v-pills-messages-tab">
+                    Messages
+                </div>
+                <div 
+                class="fade tab-pane"
+                id="v-pills-settings"
+                role="tabpanel"
+                aria-labelledby="v-pills-settings-tab">
+                    Settings
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
