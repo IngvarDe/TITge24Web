@@ -217,6 +217,126 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="my-5">Files</h3>
+
+                <div class="form-file">
+                    <input type="file" class="form-file-input" id="customFile" />
+                    <label class="form-file-label" for="customFile">
+                        <span class="form-file-text">Choose file...</span>
+                        <span class="form-file-button">Browse</span>
+                    </label>
+                </div>
+
+                <h3 class="my-5">Range</h3>
+                <label class="form-label" for="customRange1">Example range</label>
+                <input type="range" class="form-range" id="customRange1">
+            </div>
+
+            <div class="col-md-6">
+                <h3 class="my-5">Validation</h3>
+                <form class="g-3 row needs-validation" action="" novalidate>
+                    <div class="col-md-4">
+                        <label for="validationCustom1" class="form-label">First Name</label>
+                        <input 
+                        type="text"
+                        id="validationCustom1"
+                        class="form-control"
+                        value="Mark"
+                        required
+                        />
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label" for="validationCustomUsername">Username</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            <input 
+                            type="text"
+                            class="form-control"
+                            id="validationCustomUsername"
+                            aria-describedby="inputGroupPrepend"
+                            required
+                            />
+                            <div class="invalid-feedback">
+                                Please choose a username.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="validationCustom3" class="form-label">
+                            City
+                        </label>
+                        <input 
+                        type="text"
+                        class="form-control"
+                        id="validationCustom3"
+                        aria-describedby="inputGroupPrepend"
+                        required
+                        />
+                        <div class="invalid-feedback">
+                            Please provide a valid city.
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="validationCustom4" class="form-label">State</label>
+                        <select 
+                        name="" 
+                        id="validationCustom4"
+                        class="form-select"
+                        required
+                        >
+                            <option selected disabled value="">Choose...</option>
+                            <option value="">...</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please provide a valid state.
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="validationCustom5" class="form-label">Zip</label>
+                        <input 
+                        type="text"
+                        class="form-control"
+                        id="validationCustom5"
+                        required
+                        />
+                        <div class="invalid-feedback">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input 
+                            type="checkbox"
+                            class="form-check-input"
+                            id="invalidCheck"
+                            required
+                            />
+                            <label for="">
+                                gree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">
+                            Submit form
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>
