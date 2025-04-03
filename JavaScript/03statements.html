@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="adding"></p>
+
+    <button type="button" onclick="someFunction()">Click Me!</button>
+
+    <p id="hello1"></p>
+    <p id="hello2"></p>
+
+</body>
+<script>
+    //siin defineerid muutujad ära
+    let a, b, c;
+
+    a = 3;
+    b = 4;
+    c = a + b;
+    document.getElementById("adding").innerHTML = c;
+
+    function someFunction() {
+        document.getElementById("hello1").innerHTML = "Hello you";
+        document.getElementById("hello2").innerHTML = "Second hello";
+    }
+
+</script>
+</html>

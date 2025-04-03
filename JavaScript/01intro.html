@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="intro"></p>
+
+    <p id="someFunc">See on paragrahv</p>
+
+    <button type="button" onclick="someFunction()">Vajuta mind</button>
+
+</body>
+<script>
+    document.getElementById("intro").innerHTML = "JavaScript code";
+
+    function someFunction() {
+        document.getElementById("someFunc").innerHTML = "Muutsid nime";
+    }
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="varTest"></p>
+    <p id="varTest2"></p>
+    <p id="varTest3"></p>
+
+</body>
+<script>
+    //var oli kasutusel peamiselt vanemates brauserites
+    var x = 4;
+    var y = 3;
+    var a = x + y;
+    document.getElementById("varTest").innerHTML = a;
+
+    //kasuta siis, kui const ei saa kasutada
+    let q = 4;
+    let w = 3;
+    let e = q + w;
+    q = 56;
+    document.getElementById("varTest2").innerHTML = e;
+
+    //const-i kasuta ainult siis, kui andmetüüpi 
+    // ei ole plaanis muuta numbri pealt tähele
+    const r = 4;
+    const t = 3;
+    const y = r + t;
+    //const PI;
+    //PI = 3.14
+    document.getElementById("varTest3").innerHTML = y;
+</script>
+
+</html>
