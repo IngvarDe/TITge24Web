@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="toString"></p>
+
+    <p id="exponential"></p>
+
+    <p id="valueOf"></p>
+
+    <p id="parseInt"></p>
+</body>
+<script>
+    let z = 123;
+    //muuta see number stringiks
+    document.getElementById("toString").innerHTML = 
+        z.toString() + "<br>" + 
+        (123).toString() + "<br>" +
+        (100 + 23).toString();
+
+
+    let y = 4.567;
+    document.getElementById("exponential").innerHTML =
+    y.toExponential() + "<br>" +
+    y.toExponential(2) + "<br>" +
+    y.toExponential(4) + "<br>" +
+    y.toExponential(6);
+
+    //tagastab numbri numbrina
+    document.getElementById("valueOf").innerHTML = 
+        z.valueOf() + "<br>" + 
+        (123).valueOf() + "<br>" +
+        (100 + 23).valueOf();
+
+    //otsib numbri välja ja näitab seda, kui see on esimene
+    document.getElementById("parseInt").innerHTML = 
+        parseInt("100 years") + "<br>" +
+        parseInt("years 100");
+
+</script>
+</html>
