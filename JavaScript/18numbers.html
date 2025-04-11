@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="largeNumbers"></p>
+
+    <p id="someNumbers"></p>
+
+    <p id="someAdding"></p>
+
+    <p id="stringAdding"></p>
+
+    <p id="string"></p>
+
+    <p id="divide"></p>
+
+    <p id="divideString"></p>
+    
+</body>
+<script>
+    let x = 123e5;
+    let y = 123e-5;
+
+    document.getElementById("largeNumbers").innerHTML = x + "<br>" + y;
+
+    let a = 999999999999999;
+    let b = 9999999999999999;
+
+    document.getElementById("someNumbers").innerHTML = a + "<br>" + b;
+
+    let q = 10;
+    let w = 20
+    let e = q + w;
+    document.getElementById("someAdding").innerHTML = e;
+
+    let r = "10";
+    let t = "20";
+    let u = r + t;
+    document.getElementById("stringAdding").innerHTML = e;
+
+    var i = 10;
+    var o = 20;
+    document.getElementById("string").innerHTML = 
+    "The result is: " + i + o;
+
+    let f = "100";
+    let g = "10";
+    let h = f / g;
+    document.getElementById("divide").innerHTML = h;
+
+    let j = 100 / "IBM";
+    document.getElementById("divideString").innerHTML = j;
+</script>
+</html>

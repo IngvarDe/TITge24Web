@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="someText"></p>
+
+    <p id="loopFor"></p>
+    
+</body>
+<script>
+    let firstName = "Kadri";
+    let lastName = "Org";
+
+    let text = `tere tulemast ${firstName}, ${lastName}!`;
+
+    document.getElementById("someText").innerHTML = text;
+
+    let head = "Some template text";
+    let array = ["template text", "typescript", "browser"];
+
+    let html = `<h1>${head}</h1><ul>`;
+    //teha for loop
+    for (const x of array) {
+        html += `<h1>${x}</h1>`;
+    }
+
+    html += `<ul>`;
+    document.getElementById("loopFor").innerHTML = html;
+
+</script>
+</html>
