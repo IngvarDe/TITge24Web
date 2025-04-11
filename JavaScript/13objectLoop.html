@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="human"></p>
+
+    <p id="fruitBasket"></p>
+
+    <p id="kadri"></p>
+    
+</body>
+
+<script>
+
+//see on objekt
+    const person = {
+        firstName:"Heli", 
+        lastName:"Kopter", 
+        age: 40
+    };
+
+    //kasutame loopi
+    let text = "";
+    for (let x in person) {
+        text += person[x] + " ";
+    };
+
+    document.getElementById("human").innerHTML = text;
+
+    //uus object nimega fruits ja sinna kolm puuvilja
+    //siis tuleb for loopiga need esile kutsuda
+
+    const fruits = {Apple:100, Oranges:100, Pineapple:450};
+
+    let text1 = "";
+    for (let [fruit, amount] of Object.entries(fruits)) {
+        text1+= fruit + ": " + amount + "<br>";
+    }
+    document.getElementById("fruitBasket").innerHTML = text1;
+
+    const person1 = {
+        firstName:"Kadri", 
+        lastName:"Org", 
+        age: 20
+    };
+
+    //tulemus peab olema selline:
+    //{"firstName":"Kadri", "lastName":"Org", "age":"20"}
+
+    document.getElementById("kadri").innerHTML = JSON.stringify(person1);
+
+</script>
+</html>
