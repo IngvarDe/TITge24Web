@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="human"></p>
+    
+</body>
+<script>
+
+    //constructor funktsioon Person objektile
+    function Person(first, last, age, eye) {
+        this.firstname = "first";
+        this.lastName = "last";
+        this.age = "age";
+        this.eyeColor = "eye";
+        this.height = 188;
+    }
+
+    //loome kaks Person objekti
+    const human1 = new Person("Kadri", "Org", 35, "hazel");
+    const human2 = new Person("Heli", "Kopter", 30, "brown");
+
+    //Peaks ära näitama inimese pikkuse koos nimega, 
+    // aga ainult ühte elementi tohib kasutada
+
+    document.getElementById("human").innerHTML =
+    "First person is " + human1.height + ". Second person is " + human2.height;
+
+</script>
+
+</html>
