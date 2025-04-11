@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="human"></p>
+
+    <p id="human1"></p>
+
+    <p id="human2"></p>
+
+    <p id="human3"></p>
+
+</body>
+
+<script>
+    //objekti tegemine
+    const person = {firstName:"Heli", lastName:"Kopter", height:"180"}
+
+    document.getElementById("human").innerHTML = 
+    person.firstName + " is "+ person.height + " cm.";
+
+    //objekti tegemine
+    const person1 = new Object();
+    person1.firstName = "Kadri";
+    person1.lastName = "Org";
+    person1.age = 40; //siin ei tohi anmdeid muuta
+    //tuleb teha teha uus objekt ja seal k'sitleda age
+    //annate age uue v''rtuse
+
+    document.getElementById("human1").innerHTML = 
+    person1.firstName + " " + person1.lastName + " is " + person1.age + " years old";
+
+    const y = person1;
+
+    y.age = 10;
+
+    document.getElementById("human3").innerHTML = 
+    person1.firstName + " " + person1.lastName + " is " + person1.age + " years old";
+
+    const person2 = {
+        firstName:"Auto", 
+        lastName:"Maaler",
+        height:"180",
+        fullName: function() {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+
+    document.getElementById("human2").innerHTML = person2.fullName();
+
+</script>
+</html>

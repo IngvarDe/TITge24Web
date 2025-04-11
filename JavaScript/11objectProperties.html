@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="human"></p>
+
+    <p id="human1"></p>
+    
+</body>
+<script>
+    const person = {
+        firstName:"Heli", 
+        lastName:"Kopter", 
+        age: 40
+    }
+
+    let x = "firstName";
+    let y = "age";
+
+    document.getElementById("human").innerHTML = person[x] + " is " + 
+    person[y] + " years old";
+
+    const person1 = {
+        firstName:"Kadri", 
+        lastName:"Org", 
+        age: 30,
+        hairColor: "dark"
+    };
+    //tulemus peaks peaks olema selline: Kadri is undefined years old.
+    //kindlasti ei tohi age v''rtust 'ra kustutada
+    delete person1.age;
+    
+    document.getElementById("human1").innerHTML = person1.firstName + " is " + 
+    person1.age + " years old";
+
+</script>
+</html>
