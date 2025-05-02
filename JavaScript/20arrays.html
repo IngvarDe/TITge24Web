@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="carsArray"></p>
+    <p>-----------------------------</p>
+
+    <p id="bussesArray"></p>
+
+    <p>-----------------------------</p>
+    <p id="trainsArray"></p>
+
+    <p>Ainult Volvo bussi nimetust tahan näha</p>
+    <p id="secondArray"></p>
+
+    <p>-----------------------------</p>
+    <p id="bulildings"></p>
+
+    <p>Võite võtta majade loetelu, aga sõnade vahel *</p>
+    <p>Kasutage join-i</p>
+    <p id="buildingsAsterix"></p>
+
+    <p>Pop ei kuva viimast loetelus</p>
+    <p id="buildingsPop"></p>
+
+    <p>Kasutada buildings massiivi ja lisada üks hoonetüüp juurde</p>
+    <p>Massiivi ei tohi juurde lisada uut nimetust</p>
+    <p>Kasutage push()</p>
+    <p id="buildingsPush1"></p>
+    <p id="buildingsPush2"></p>
+
+    <p>-----------------------------</p>
+    <p>Liidab kaks massiivi kokku</p>
+    <p id="spaceRocks"></p>
+</body>
+
+<script>
+    const cars = [
+        "Audi",
+        "MAN",
+        "BMW"
+    ];
+    document.getElementById("carsArray").innerHTML = cars;
+
+    const busses = [];
+    busses[0] = "Ikarus";
+    busses[1] = "Volvo";
+    busses[2] = "Scania";
+    document.getElementById("bussesArray").innerHTML = busses;
+
+    const trains = new Array("Skoda", "ALSTOM", "Siemens");
+    document.getElementById("trainsArray").innerHTML = trains;
+
+    document.getElementById("secondArray").innerHTML = busses[1];
+
+    const buildings = ["house", "cottage", "flat", "bangaloow"]
+    let building = buildings.at(2);
+    document.getElementById("bulildings").innerHTML = building;
+
+    document.getElementById("buildingsAsterix").innerHTML = buildings.join(" * ");
+
+    buildings.pop();
+    document.getElementById("buildingsPop").innerHTML = buildings;
+
+    document.getElementById("buildingsPush1").innerHTML = buildings.push("shed");
+    document.getElementById("buildingsPush2").innerHTML = buildings;
+
+    const planets = ["Venus", "Earth"];
+    const moons = ["Ganymede", "Titan", "Europa"]
+    const spaceRocks = planets.concat(moons);
+    document.getElementById("spaceRocks").innerHTML = spaceRocks;
+</script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Päevad oleksid vastupidises järjekorras</p>
+    <p id="days"></p>
+
+    <p>Numbrid tuleb õigesse järjekorda panna</p>
+    <p id="numbers1"></p>
+
+    <p>Sorteeritud</p>
+    <p id="numbers2"></p>
+
+    <button onclick="sortRandomNumbers()">Try it</button>
+    <p id="sortRandom"></p>
+
+    <p>Find smallest number</p>
+    <p id="findSmallest"></p>
+
+    <p>Sorteerib autod</p>
+    <button onclick="sortCars()">Sorteeri autod</button>
+    <p id="carsSorting"></p>
+
+</body>
+<script>
+    const days = ["Monday", "Tuesday", "Wendsday", "Thursday"];
+    const reversed = days.toReversed();
+
+    document.getElementById("days").innerHTML = reversed;
+
+    const numbers = [32, 4, 100, 9, 49, 25, 87, 99];
+    document.getElementById("numbers1").innerHTML = numbers;
+
+    numbers.sort(function(a, b){return a - b});
+    document.getElementById("numbers2").innerHTML = numbers;
+
+    function sortRandomNumbers() {
+        numbers.sort(function(){return 0.5 - Math.random()});
+        document.getElementById("sortRandom").innerHTML = numbers;
+    }
+
+    document.getElementById("findSmallest").innerHTML = findSmallestNumber(numbers)
+    function findSmallestNumber(arr) {
+        let len = arr.length;
+        let min = Infinity;
+        while (len--) {
+            if (arr[len] < min ) {
+                min = arr[len];
+            }
+        }
+        return min;
+    }
+
+    const cars = [
+        {type:"Volvo", year:2015},
+        {type:"Saab", year:2002},
+        {type:"BMW", year:2009},
+        ];
+
+        displayCars();
+
+        function sortCars() {
+            cars.sort(function(a, b){
+                let x = a.type.toLocaleLowerCase();
+                let y = b.type.toLocaleLowerCase();
+                if (x < y) {return -1;}
+                if (x > y) {return 1;}
+                return 0;
+            });
+            displayCars();
+        }
+
+        function displayCars() {
+            document.getElementById("carsSorting").innerHTML = 
+            cars[0].type + " " + cars[0].year + "<br>" + 
+            cars[1].type + " " + cars[1].year + "<br>" + 
+            cars[2].type + " " + cars[2].year; 
+        }
+
+</script>
+</html>

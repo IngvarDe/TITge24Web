@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="findNumber"></p>
+
+    <p>kasutage findlast() ja kasutage number 18</p>
+
+    <p id="someLastNumber"></p>
+
+</body>
+<script>
+    const numbers = [3, 6, 14, 28, 29, 21];
+    let first = numbers.find(numberFunc);
+
+    document.getElementById("findNumber").innerHTML = "First number over 18 is " + first;
+
+    function numberFunc(value, index, array){
+        return value > 18;
+    }
+
+    let someLastNumber = numbers.findLast(x => x > 18);
+    document.getElementById("someLastNumber").innerHTML = "The last number over 18 is " + someLastNumber;
+</script>
+</html>
