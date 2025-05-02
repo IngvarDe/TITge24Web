@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="timeGreeting"></p>
+
+    <p id="randomLink"></p>
+</body>
+
+<script>
+    const time = new Date().getHours();
+    let greeting;
+    if (time < 10) {
+        greeting = "Good morning";
+    } else if (time <20) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good evening";
+    }
+    document.getElementById("timeGreeting").innerHTML = greeting;
+
+    //////////////////////////////////
+    let text;
+    if (Math.random() < 0.5) {
+        text = "<a href='https://www.err.ee/'>ERR</a>"
+    } else {
+        text = "<a href='https://www.delfi.ee/'>Delfi</a>"
+    }
+    document.getElementById("randomLink").innerHTML = text;
+
+</script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="numberOver"></p>
+
+    <p>Kõikide numbers masiivi all olevate numbrite koondsumma on vaja saada</p>
+
+    <p id="arraySum"></p>
+
+    <p>Tulemuse vastus peaks olema: Kõik üle 18 on false</p>
+    <p>Kasutada every() funktsiooni</p>
+    <p id="allOver18"></p>
+
+    <p>Tuleb kasutada keys() funktsiooni</p>
+    <p>tuleb kasutada for loopi</p>
+    <p>Tulemus peab olema selline:</p>
+    <p>0</p>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+
+    <p id="keysArrayCars"></p>
+
+    <p>-----------------------------</p>
+    <p id="daysWith"></p>
+</body>
+
+<script>
+    const numbers = [45, 6, 2, 17, 34];
+    const overNumber18 = numbers.filter(numberOver);
+
+    document.getElementById("numberOver").innerHTML = overNumber18;
+
+    function numberOver(value, index, array) {
+        return value > 18;
+    }
+
+    let sum = numbers.reduce(arraySum);
+
+    document.getElementById("arraySum").innerHTML = " Koondsumma on " + sum;
+
+    function arraySum(total, value, index, array) {
+        return total + value;
+    }
+    //////////////////////
+    let allOverNumber18 = numbers.every(allOverNumber);
+
+    document.getElementById("allOver18").innerHTML = "Kõik üle 18 on " + allOverNumber18;
+
+    function allOverNumber(value, index, array) {
+        return value > 18;
+    }
+    /////////////////////
+    const cars = ["Audi", "BMW", "Saab", "Wolkswagen"];
+    const keys = cars.keys();
+
+    let text = "";
+    for (let x of keys) {
+        text += x + "<br>";
+    }
+
+    document.getElementById("keysArrayCars").innerHTML = text;
+
+    /////////////////////
+    const days = ["Monday", "Tuesday", "Wen", "Thursday"];
+    const myDays = days.with(2, "Wendsday");
+
+    document.getElementById("daysWith").innerHTML = myDays;
+
+</script>
+</html>
