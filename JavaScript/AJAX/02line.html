@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="lineCanvas" width="400" height="400" style="border:1px solid grey"></canvas>
+</body>
+
+<script>
+    const canvas = document.getElementById("lineCanvas");
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "black";
+    canvas.height = canvas.width;
+    ctx.transform(1, 0, 0, -1, 0, canvas.height);
+
+    let xMax = canvas.height;
+    let slope = 1.2;
+    let intercept = 70;
+
+    ctx.moveTo(0, intercept);
+    ctx.lineTo(xMax, f(xMax));
+    ctx.strokeStyle = "black";
+    ctx.stroke();
+
+    function f(x) {
+        return x * slope + intercept;
+    }
+
+</script>
+</html>
