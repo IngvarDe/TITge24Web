@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="carChart" style="width: 100%; max-width: 600px; height:500px;"></div>
+    
+</body>
+
+<script>
+
+    google.charts.load('current',{packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+        const data = google.visualization.arrayToDataTable([
+            ['Price', 'Size'],
+            [50,7],[60,8],[70,8],[80,9],[90,9],
+            [100,9],[110,10],[120,11],
+            [130,14],[140,14],[150,15]
+        ]);
+
+        const options = {
+            title: 'Car prices vs Power',
+            hAxis: {title: 'Kilowats'},
+            vAxis: {title: 'Price in thousands'},
+            legend: 'none'
+        };
+
+        const chart = new 
+        google.visualization.LineChart(document.getElementById('carChart'));
+        chart.draw(data, options);
+    }
+</script>
+</html>

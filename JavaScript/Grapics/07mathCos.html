@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="linePlot" style="width: 100%; max-width: 700px;"></div>
+</body>
+
+<script>
+    let exp = "Math.cos(x)";
+
+    const xValues = [];
+    const yValues = [];
+    for (let x = 0; x <= 10; x += 0.2) {
+        xValues.push(x);
+        yValues.push(eval(exp));
+    }
+
+    const data = [{x:xValues, y:yValues, mode:"markers"}];
+    const layout = {title: "y = " + exp};
+    Plotly.newPlot("linePlot", data, layout);
+</script>
+
+</html>

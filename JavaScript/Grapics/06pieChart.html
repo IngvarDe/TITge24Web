@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Koogi chart</p>
+
+    <div id="linePlot" style="width:100%; max-width:700px;"></div>
+
+</body>
+
+<script>
+    const xArray = ["Italy", "Germany", "Estonia", "Sweden", "Finland"];
+    const yArray = [55, 30, 40, 15, 16];
+
+    const layout = {title:"World cranberry production"};
+
+    const data = [{labels:xArray, values:yArray, hole:.2, type:"pie"}];
+
+    Plotly.newPlot("linePlot", data, layout);
+</script>
+
+</html>
