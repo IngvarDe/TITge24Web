@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="loadAJAX">
+    <p>AJAX muudab teksti</p>
+    <button type="button" onclick="loadText()">Muuda</button>
+</body>
+<script>
+    function loadText() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("loadAJAX").innerHTML = 
+                this.responseText;
+            }
+        };
+        xhttp.open("GET", "ajaxInfo.txt");
+        xhttp.send();
+    }
+</script>
+</html>

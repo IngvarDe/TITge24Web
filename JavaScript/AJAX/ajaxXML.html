@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="ajaxXMLList">
+    <p>Kasutada for loopi</p>
+    <p>faili lained peab olema .xml</p>
+    <p>Failis peab olema 20 rida nimesid</p>
+    <p>iga nimi peab olema järgmisel real</p>
+    <button type="button" onclick="onClickFunc()">Vajuta mind</button>
+</body>
+<script>
+    function onClickFunc() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                const xmlDocument = this.responseXML;
+                const x = xmlDocument.getElementsByTagName("ARTIST");
+                let txt = "";
+                for (let i = 0; i < x.length; i++) {
+                    txt += x[i].textContent + "<br>";
+                }
+                document.getElementById("ajaxXMLList").innerHTML = txt;
+            }
+        }
+        xhttp.open("GET", "nimed.xml");
+        xhttp.send();
+    }
+</script>
+</html>
